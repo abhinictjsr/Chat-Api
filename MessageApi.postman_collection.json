@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "fbbee18f-8d1c-4f88-ab99-79a5f5c05f89",
+		"name": "MessageApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13196521"
+	},
+	"item": [
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senderId\":\"1\",\r\n    \"reciverID\":\"3\",\r\n    \"message\":\"hellssssssssssso...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/send_msg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"send_msg"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Send Message",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\":\"1\",\r\n    \"reciverID\":\"2\",\r\n    \"message\":\"jhuhjkbhjfb uhrfer...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/send_msg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"send_msg"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "218"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"da-BdkPe5FlalNJ4yAUvNIWjFZ2E+Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Jan 2023 07:02:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"senderId\": \"1\",\n        \"reciverID\": \"2\",\n        \"message\": \"jhuhjkbhjfb uhrfer...\",\n        \"created_at\": \"2023-01-14T06:54:50.338Z\",\n        \"_id\": \"63c253a16ce11a2e6af542e9\",\n        \"__v\": 0\n    },\n    \"message\": \"Message has been sent Successfully!\",\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Chat History",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":\"1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/chat_history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chat_history"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Chat History",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userId\":\"1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/chat_history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat_history"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "300"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12c-7tIBZqWnhYVFbEFkgeVYsIOksQg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Jan 2023 08:21:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"senderId\": \"1\",\n            \"reciverID\": \"2\",\n            \"message\": \"jhuhjkbhjfb uhrfer...\",\n            \"created_date\": \"2023-01-14\",\n            \"created_time\": \"12:24:50\"\n        },\n        {\n            \"senderId\": \"3\",\n            \"reciverID\": \"1\",\n            \"message\": \"helldfgdrgo...\",\n            \"created_date\": \"2023-01-14\",\n            \"created_time\": \"12:24:50\"\n        }\n    ],\n    \"message\": \"Record Fetched Successfully!\",\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "One To One Chat History",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\",\r\n    \"chatUserId\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/one_to_one_chat_history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"one_to_one_chat_history"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "One To One Chat History",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"1\",\r\n    \"chatUserId\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/one_to_one_chat_history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"one_to_one_chat_history"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "426"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1aa-dJWsGOXtEM02xhFUAQAgNrJZ1UY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Jan 2023 08:21:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"senderId\": \"2\",\n            \"reciverID\": \"1\",\n            \"message\": \"accccccfgdrgo...\",\n            \"created_date\": \"2023-01-14\",\n            \"created_time\": \"12:24:50\"\n        },\n        {\n            \"senderId\": \"2\",\n            \"reciverID\": \"1\",\n            \"message\": \"accccccfggggggggggrgo...\",\n            \"created_date\": \"2023-01-14\",\n            \"created_time\": \"12:24:50\"\n        },\n        {\n            \"senderId\": \"1\",\n            \"reciverID\": \"2\",\n            \"message\": \"jhuhjkbhjfb uhrfer...\",\n            \"created_date\": \"2023-01-14\",\n            \"created_time\": \"12:24:50\"\n        }\n    ],\n    \"message\": \"Record Fetched Successfully!\",\n    \"status\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Total Chat User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userId\":\"1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/total_chat_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"total_chat_user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Total Chat User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"userId\":\"1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/total_chat_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"total_chat_user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "100"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"64-dRDRk7PdLemXKifoiJqWnxg3Vf8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 Jan 2023 08:21:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"total_user\": 2,\n        \"userIds\": [\n            \"3\",\n            \"2\"\n        ]\n    },\n    \"message\": \"Record Fetched Successfully!\",\n    \"status\": true\n}"
+				}
+			]
+		}
+	]
+}
