@@ -2,7 +2,7 @@
     senderId, ReciverID ,message,created date and time
 
 2.Create history api
-(if i am sending message to anyone create history if anyone send message to mc created history)
+(if i am sending message to anyone create history if anyone send message to me created history)
 
     senderId,reciverId,lastMsg,created date and time,
 
